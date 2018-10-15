@@ -1,6 +1,4 @@
-"""
-Example yaml parameter file for the simba runner.
-"""
+# Example yaml parameter file for the simba runner.
 
 snapshots:
     ini: /path/to/ini/snapshot
