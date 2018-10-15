@@ -10,3 +10,11 @@ halo_catalogue:
     path: /path/to/halo/catalogue
     pickle_name: halo_catalogue.pickle # For those that need to be pickled e.g. ahf
 
+ltcaesar:
+    # Various LTCaesar parameters that you will need
+    notrunc: 0
+    yt: 0
+    otherhalofinder: 0
+    lagrangianregions: 1
+    aboveid: 0
+    virialradius: 1.0

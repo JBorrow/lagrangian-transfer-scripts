@@ -38,7 +38,7 @@ subprocess.call(
     [
         f"{shared_variables.environment_name}/bin/pip",
         "install",
-        "cython", "numpy", "matplotlib", "scipy", "h5py", "pyyaml"
+        "cython", "numpy", "matplotlib", "scipy", "h5py", "pyyaml", "yt", "tqdm"
     ]
 )
 
