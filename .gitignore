@@ -2,3 +2,5 @@ caesar/*
 lagrangian-transfer/*
 *__pycache__*
 simba_env/*
+
+parameters.yml

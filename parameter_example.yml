@@ -1,0 +1,14 @@
+"""
+Example yaml parameter file for the simba runner.
+"""
+
+snapshots:
+    ini: /path/to/ini/snapshot
+    end: /path/to/end/snapshot
+
+halo_catalogue:
+    type: velociraptor # velociraptor, ahf, caesar
+    run_caesar: False # If true, run caesar on end snapshot
+    path: /path/to/halo/catalogue
+    pickle_name: halo_catalogue.pickle # For those that need to be pickled e.g. ahf
+
