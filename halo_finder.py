@@ -5,7 +5,7 @@ Runs the halo finder if required, else runs the correct script to parse it.
 import shared_variables
 import subprocess
 
-if shared_variables.halo_catalogue_run_caesar:
+if shared_variables.parameters.halo_catalogue_run_caesar:
     subprocess.call(
         [
             "caesar",
@@ -34,7 +34,7 @@ elif shared_variables.parameters.halo_catalogue_type == "ahf":
             shared_variables.parameters.halo_catalogue_pickle_name
         ]
     )
-elif shared_variables.halo_catalogue_type == "caesar":
+elif shared_variables.parameters.halo_catalogue_type == "caesar":
     pass
 else:
     raise AttributeError(
