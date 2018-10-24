@@ -28,7 +28,7 @@ elif shared_variables.parameters.halo_catalogue_type == "ahf":
     subprocess.call(
         [
             f"{shared_variables.environment_name}/bin/python",
-            "lagrangian-transfer/scripts/parse_halo_centers_ahf.py",
+            "lagrangian-transfer/scripts/parse_halo_centers.py",
             shared_variables.parameters.snapshot_end,
             shared_variables.parameters.halo_catalogue_path,
             shared_variables.parameters.halo_catalogue_pickle_name
