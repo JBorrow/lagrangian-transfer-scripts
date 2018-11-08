@@ -24,6 +24,18 @@ if shared_variables.parameters.halo_catalogue_type == "velociraptor":
             shared_variables.parameters.halo_catalogue_pickle_name
         ]
     )
+elif shared_variables.parameters.halo_catalogue_type == "velociraptor-particles":
+    # For this you need to have ran the tools available at
+    # https://github.com/JBorrow/simba-velociraptor-tools
+    subprocess.call(
+        [
+            f"{shared_variables.environment_name}/bin/python",
+            "lagrangian-transfer/scripts/parse_velociraptor.py",
+            shared_variables.parameters.snapshot_end,
+            shared_variables.parameters.halo_catalogue_path,
+            shared_variables.parameters.halo_catalogue_pickle_name
+        ]
+    )
 elif shared_variables.parameters.halo_catalogue_type == "ahf":
     subprocess.call(
         [
