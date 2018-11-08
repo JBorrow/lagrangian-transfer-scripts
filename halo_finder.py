@@ -31,8 +31,8 @@ elif shared_variables.parameters.halo_catalogue_type == "velociraptor-particles"
         [
             f"{shared_variables.environment_name}/bin/python",
             "lagrangian-transfer/scripts/parse_velociraptor.py",
-            shared_variables.parameters.snapshot_end,
             shared_variables.parameters.halo_catalogue_path,
+            shared_variables.parameters.snapshot_end,
             shared_variables.parameters.halo_catalogue_pickle_name
         ]
     )
