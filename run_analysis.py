@@ -29,6 +29,8 @@ subprocess.call(
         f"{shared_variables.parameters.ltcaesar_otherhalofinder}",
         "-l",
         f"{shared_variables.parameters.ltcaesar_lagrangianregions}",
+        "-r",
+        f"{shared_variables.parameters.ltcaesar_virialradius}"
     ]
 )
 
