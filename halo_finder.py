@@ -6,22 +6,17 @@ import shared_variables
 import subprocess
 
 if shared_variables.parameters.halo_catalogue_run_caesar:
-    subprocess.call(
-        [
-            "caesar",
-            shared_variables.parameters.snapshot_end
-        ]
-    )
+    subprocess.call(["caesar", shared_variables.parameters.snapshot_end])
 
 
 if shared_variables.parameters.halo_catalogue_type == "velociraptor":
     subprocess.call(
         [
-            f"{shared_variables.code_location}/{shared_variables.environment_name}/bin/python",
-            "{shared_variables.code_location}/lagrangian-transfer/scripts/parse_halo_centers_velociraptor.py",
+            f"{shared_variables.parameters.code_location}/{shared_variables.environment_name}/bin/python",
+            f"{shared_variables.parameters.code_location}/lagrangian-transfer/scripts/parse_halo_centers_velociraptor.py",
             shared_variables.parameters.snapshot_end,
             shared_variables.parameters.halo_catalogue_path,
-            shared_variables.parameters.halo_catalogue_pickle_name
+            shared_variables.parameters.halo_catalogue_pickle_name,
         ]
     )
 elif shared_variables.parameters.halo_catalogue_type == "velociraptor-particles":
@@ -29,21 +24,21 @@ elif shared_variables.parameters.halo_catalogue_type == "velociraptor-particles"
     # https://github.com/JBorrow/simba-velociraptor-tools
     subprocess.call(
         [
-            f"{shared_variables.code_location}/{shared_variables.environment_name}/bin/python",
-            "{shared_variables.code_location}/lagrangian-transfer/scripts/parse_velociraptor.py",
+            f"{shared_variables.parameters.code_location}/{shared_variables.environment_name}/bin/python",
+            f"{shared_variables.parameters.code_location}/lagrangian-transfer/scripts/parse_velociraptor.py",
             shared_variables.parameters.halo_catalogue_path,
             shared_variables.parameters.snapshot_end,
-            shared_variables.parameters.halo_catalogue_pickle_name
+            shared_variables.parameters.halo_catalogue_pickle_name,
         ]
     )
 elif shared_variables.parameters.halo_catalogue_type == "ahf":
     subprocess.call(
         [
-            f"{shared_variables.code_location}/{shared_variables.environment_name}/bin/python",
-            "{shared_variables.code_location}/lagrangian-transfer/scripts/parse_halo_centers.py",
+            f"{shared_variables.parameters.code_location}/{shared_variables.environment_name}/bin/python",
+            f"{shared_variables.parameters.code_location}/lagrangian-transfer/scripts/parse_halo_centers.py",
             shared_variables.parameters.snapshot_end,
             shared_variables.parameters.halo_catalogue_path,
-            shared_variables.parameters.halo_catalogue_pickle_name
+            shared_variables.parameters.halo_catalogue_pickle_name,
         ]
     )
 elif shared_variables.parameters.halo_catalogue_type == "caesar":
@@ -52,4 +47,3 @@ else:
     raise AttributeError(
         "Please pass to halo_catalogue:type velociraptor, ahf, or caesar"
     )
-
