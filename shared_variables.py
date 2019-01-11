@@ -32,6 +32,11 @@ try:
             self.ltcaesar_aboveid = self.raw_data["ltcaesar"]["aboveid"]
             self.ltcaesar_virialradius = self.raw_data["ltcaesar"]["virialradius"]
 
+            try:
+                self.code_location = self.raw_data["meta"]["code_location"]
+            except:
+                self.code_location = "."
+
             return
         
             
