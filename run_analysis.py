@@ -12,7 +12,7 @@ else:
 
 subprocess.call(
     [
-        f"{shared_variables.environment_name}/bin/python",
+        f"{shared_variables.parameters.code_location}/{shared_variables.environment_name}/bin/python",
         "-m",
         "analyse",
         "-i",
